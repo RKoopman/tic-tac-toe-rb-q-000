@@ -1,3 +1,5 @@
+board = Array.new(9, " ")
+
 WIN_COMBINATIONS = [
   [0,1,2],
   [3,4,5],
@@ -17,8 +19,8 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def move(board, location, current_player="X")
-  board[location] = current_player
+def move(board, position, char="X")
+  board[position.to_i-1] = char
 end
 
 def position_taken?(board, location)
